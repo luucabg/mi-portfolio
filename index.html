@@ -3,64 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio - Luca Benidze</title>
+  <title>Portfolio — Luca Benidze</title>
   <link rel="stylesheet" href="Style/main.css">
 </head>
 <body>
   <header>
     <div class="barra-principal">
-      <h1><strong>Luca B.G.</strong></h1>
+      <h1>LBG</h1>
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">≡</button>
     </div>
 
     <nav id="main_nav">
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#inicio">Presentación</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#cv">Currículum</a></li>
+        <li><a href="#estudios">Estudios/Trabajos</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <li><a href="politica.html" target="_blank" rel="noopener">Privacidad</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="inicio">
-    <section class="hero">
-      <h2>¡Hola! Soy Luca Benidze</h2>
-      <p>Técnico informático / Desarrollo y ciberseguridad</p>
-      <a class="btn" href="#proyectos">Ver proyectos</a>
-    </section>
-
-    <section id="proyectos" class="proyectos">
-      <h2>Proyectos</h2>
-
-    </section>
-
-    <section id="cv" class="cv">
-      <h2>Currículum</h2>
-      <ul>
-        <li><strong>Experiencia:</strong> Soporte técnico N1; Técnico de sistemas en Ayuntamiento</li>
-        <li><strong>Formación:</strong> DAM (en curso), SMR</li>
-        <li><strong>Contactos:</strong> <a href="mailto:lucabenidze@gmail.com">lucabenidze@gmail.com</a> · <a href="https://www.linkedin.com/in/lucabenidze" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
-    </section>
-
-    <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <p>Escríbeme: <a href="mailto:lucabenidze@gmail.com">lucabenidze@gmail.com</a></p>
-    </section>
+    <section class="hero" aria-label="Presentación"></section>
+    <section id="proyectos" class="proyectos"></section>
+    <section id="estudios" class="cv"></section>
+    <section id="contacto" class="contacto"></section>
   </main>
 
-
+  <!-- Popup cookies -->
   <div class="cookie-popup" id="cookiePopup" hidden>
-    <p>Este sitio utiliza cookies. <a href="politica.html" target="_blank" rel="noopener">Más info</a></p>
+    <p>Este sitio usa cookies técnicas. <a href="politica.html" target="_blank" rel="noopener">Más info</a></p>
     <button id="acceptCookies">Aceptar</button>
   </div>
 
-  <footer>
-    <p>@ 2025 || Hecho y diseñado por Luca</p>
-  </footer>
-
+  <footer><p>2025 || Luca Benidze</p></footer>
   <script src="Javascript.js"></script>
 </body>
 </html>
