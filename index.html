@@ -23,6 +23,8 @@
     /* Aplicar fuentes personalizadas */
     body {
       font-family: 'Ubuntu', sans-serif;
+      background: linear-gradient(180deg, #579065 0%, #2E5D3B 100%);
+      min-height: 100vh;
     }
     
     h1, h2, h3 {
@@ -36,34 +38,54 @@
     .main-menu a, .btn {
       font-family: 'Ubuntu', sans-serif;
     }
+    
+    /* Navegación del header */
+    .header-nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    
+    .header-nav a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+    
+    .header-nav a:hover {
+      background-color: #ececec;
+    }
+    
+    /* Ocultar navegación del header en mobile */
+    @media (max-width: 959px) {
+      .header-nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="header">
     <div class="header__bar">
       <h1 class="logo">LBG</h1>
-      <button id="menu-link" class="menu-button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">≡</button>
+      <nav class="header-nav">
+        <a href="#inicio">PRESENTACION</a>
+        <a href="#proyectos">PROYECTOS</a>
+        <a href="#estudios">ESTUDIOS/TRABAJOS</a>
+        <a href="#contacto">CONTACTO</a>
+      </nav>
+      
     </div>
-    <nav id="main-nav" class="main-menu">
-      <ul class="main-menu__list">
-        <li><a href="#inicio">PRESENTACION</a></li>
-        <li><a href="#proyectos">PROYECTOS</a></li>
-        <li><a href="#estudios">ESTUDIOS/TRABAJOS</a></li>
-        <li><a href="#contacto">CONTACTO</a></li>
-      </ul>
-    </nav>
+
   </header>
 
   <main id="inicio">
     <section class="hero">
       <div class="presentacion">
         <img class="foto" src="assets/img/perfil.jpg" alt="Foto de Luca" width="260" height="260">
-        <div class="botonera">
-          <a class="btn" href="#inicio">PRESENTACION</a>
-          <a class="btn" href="#proyectos">PROYECTOS</a>
-          <a class="btn" href="#estudios">ESTUDIOS/TRABAJOS</a>
-          <a class="btn" href="#contacto">CONTACTO</a>
-        </div>
       </div>
     </section>
 
