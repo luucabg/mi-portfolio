@@ -1,5 +1,5 @@
 :root{
-  --bg:#0f0f12; --fg:#e9e9ec; --muted:#b6b7c0; --accent:#5b7cfa;
+  --bg:#9dff00; --fg:#e9e9ec; --muted:#b6b7c0; --accent:#5b7cfa;
   --space:16px; --maxw:1100px;
 }
 
@@ -11,11 +11,13 @@ body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; 
 .header__bar{display:flex; justify-content:space-between; align-items:center; padding:12px var(--space); max-width:var(--maxw); margin:0 auto}
 .menu-button{font-size:1.4rem; border:1px solid #555; background:#eee; color:#111; padding:6px 10px; border-radius:6px; cursor:pointer}
 
-.main-menu{display:none}
+/* menú mobile por defecto cerrado */
+.main-menu { display: none; }
 .main-menu__list{list-style:none; padding:0; margin:8px auto; max-width:var(--maxw); display:flex; flex-direction:column; gap:10px; align-items:center}
 .main-menu a{color:#111; text-decoration:none; padding:6px 10px; border-radius:6px}
 .main-menu a:hover{background:#ececec}
-.main-menu.menu--open{display:block}
+
+.main-menu.dropdown-menu { display: block; }
 
 /* secciones */
 main>section{padding:28px var(--space); margin:0 auto; max-width:var(--maxw)}
@@ -36,21 +38,22 @@ main>section{padding:28px var(--space); margin:0 auto; max-width:var(--maxw)}
 .card{background:#15151a; border:1px solid #262631; border-radius:12px; padding:12px}
 .card img{width:100%; height:auto; border-radius:10px}
 
-/* cookies */
-.cookie-popup{
-  position:fixed; left:0; right:0; bottom:0;
-  background:#15151a; border-top:1px solid #262631;
-  padding:12px var(--space); display:flex; gap:12px; align-items:center; justify-content:space-between;
+.cookie-popup { display: none; }
+.cookie-popup.show { 
+  display: flex;
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: #15151a; color: #e9e9ec;
+  border-top: 1px solid #262631;
+  padding: 12px 16px; gap: 12px; align-items: center; justify-content: space-between;
 }
-.cookie-popup[hidden]{display:none}
 
 /* footer */
 .footer{padding:24px var(--space); text-align:center; color:var(--muted)}
 
-/* desktop */
+/* escritorio: nav siempre visible */
 @media (min-width:960px){
-  .menu-button{display:none}
-  .main-menu{display:block}
+  .menu-button{ display:none; }
+  .main-menu{ display:block; }
   .main-menu__list{flex-direction:row; gap:24px; margin:8px auto}
   .presentacion{grid-template-columns:1fr 1fr; align-items:center}
   .botonera{order:1}
