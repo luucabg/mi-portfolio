@@ -1,0 +1,58 @@
+:root{
+  --bg:#0f0f12; --fg:#e9e9ec; --muted:#b6b7c0; --accent:#5b7cfa;
+  --space:16px; --maxw:1100px;
+}
+
+*{box-sizing:border-box} html,body{margin:0}
+body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--fg); background:var(--bg); line-height:1.6}
+
+/* header */
+.header{background:#d9d9db; color:#111; position:sticky; top:0; z-index:10}
+.header__bar{display:flex; justify-content:space-between; align-items:center; padding:12px var(--space); max-width:var(--maxw); margin:0 auto}
+.menu-button{font-size:1.4rem; border:1px solid #555; background:#eee; color:#111; padding:6px 10px; border-radius:6px; cursor:pointer}
+
+.main-menu{display:none}
+.main-menu__list{list-style:none; padding:0; margin:8px auto; max-width:var(--maxw); display:flex; flex-direction:column; gap:10px; align-items:center}
+.main-menu a{color:#111; text-decoration:none; padding:6px 10px; border-radius:6px}
+.main-menu a:hover{background:#ececec}
+.main-menu.menu--open{display:block}
+
+/* secciones */
+main>section{padding:28px var(--space); margin:0 auto; max-width:var(--maxw)}
+
+/* hero */
+.hero{min-height:40vh; display:grid; place-items:center; text-align:center}
+.presentacion{display:grid; gap:24px}
+.foto{justify-self:center; border-radius:6px; box-shadow:0 0 0 2px rgba(0,0,0,.2)}
+.botonera{display:grid; gap:14px}
+.btn{display:block; text-align:center; padding:14px; background:#e3e3e6; color:#111; text-decoration:none; border-radius:8px; border:1px solid #5a5a66}
+.btn:hover{background:#dcdce0}
+
+/* proyectos */
+.projects .grid{
+  display:grid; gap:16px;
+  grid-template-columns: repeat(auto-fit, minmax(260, 1fr));
+}
+.card{background:#15151a; border:1px solid #262631; border-radius:12px; padding:12px}
+.card img{width:100%; height:auto; border-radius:10px}
+
+/* cookies */
+.cookie-popup{
+  position:fixed; left:0; right:0; bottom:0;
+  background:#15151a; border-top:1px solid #262631;
+  padding:12px var(--space); display:flex; gap:12px; align-items:center; justify-content:space-between;
+}
+.cookie-popup[hidden]{display:none}
+
+/* footer */
+.footer{padding:24px var(--space); text-align:center; color:var(--muted)}
+
+/* desktop */
+@media (min-width:960px){
+  .menu-button{display:none}
+  .main-menu{display:block}
+  .main-menu__list{flex-direction:row; gap:24px; margin:8px auto}
+  .presentacion{grid-template-columns:1fr 1fr; align-items:center}
+  .botonera{order:1}
+  .foto{order:2; justify-self:center}
+}
