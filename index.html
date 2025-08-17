@@ -7,36 +7,73 @@
   <link rel="stylesheet" href="Style/main.css">
 </head>
 <body>
-  <header>
-    <div class="barra-principal">
-      <h1>LBG</h1>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">≡</button>
+  <header class="header">
+    <div class="header__bar">
+      <h1 class="logo">LBG</h1>
+      <button class="menu-button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">≡</button>
     </div>
-
-    <nav id="main_nav">
-      <ul>
-        <li><a href="#inicio">Presentación</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#estudios">Estudios/Trabajos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+    <nav id="main_nav" class="main-menu">
+      <ul class="main-menu__list">
+        <li><a href="#inicio">PRESENTACION</a></li>
+        <li><a href="#proyectos">PROYECTOS</a></li>
+        <li><a href="#estudios">ESTUDIOS/TRABAJOS</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="inicio">
-    <section class="hero" aria-label="Presentación"></section>
-    <section id="proyectos" class="proyectos"></section>
-    <section id="estudios" class="cv"></section>
-    <section id="contacto" class="contacto"></section>
+    <section class="hero">
+      <div class="presentacion">
+        <img class="foto" src="assets/img/perfil.jpg" alt="Foto de Luca" width="260" height="260">
+        <div class="botonera">
+          <a class="btn" href="#inicio">PRESENTACION</a>
+          <a class="btn" href="#proyectos">PROYECTOS</a>
+          <a class="btn" href="#estudios">ESTUDIOS/TRABAJOS</a>
+          <a class="btn" href="#contacto">CONTACTO</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="projects">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <article class="card">
+          <figure><img src="assets/img/p1.jpg" alt="Proyecto 1"></figure>
+          <h3>Proyecto 1</h3><p>Landing responsive.</p>
+        </article>
+        <article class="card">
+          <figure><img src="assets/img/p2.jpg" alt="Proyecto 2"></figure>
+          <h3>Proyecto 2</h3><p>Portfolio minimal.</p>
+        </article>
+        <article class="card">
+          <figure><img src="assets/img/p3.jpg" alt="Proyecto 3"></figure>
+          <h3>Proyecto 3</h3><p>Tienda demo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="estudios" class="cv">
+      <h2>Estudios / Trabajos</h2>
+      <ul>
+        <li><strong>Experiencia:</strong> Soporte N1 — Marktel; Técnico — Ayto. Mislata</li>
+        <li><strong>Formación:</strong> DAM (en curso), SMR</li>
+        <li><strong>Contacto:</strong> <a href="mailto:lucabenidze@gmail.com">lucabenidze@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <p>Escríbeme: <a href="mailto:lucabenidze@gmail.com">lucabenidze@gmail.com</a></p>
+    </section>
   </main>
 
-  <!-- Popup cookies -->
   <div class="cookie-popup" id="cookiePopup" hidden>
     <p>Este sitio usa cookies técnicas. <a href="politica.html" target="_blank" rel="noopener">Más info</a></p>
     <button id="acceptCookies">Aceptar</button>
   </div>
 
-  <footer><p>2025 || Luca Benidze</p></footer>
+  <footer class="footer"><p>© 2025 Luca Benidze</p></footer>
   <script src="Javascript.js"></script>
 </body>
 </html>
