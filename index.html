@@ -5,67 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio — Luca Benidze</title>
   <link rel="stylesheet" href="Style/main.css">
-  <style>
-    @font-face {
-      font-family: 'DM Serif';
-      src: url('assets/fonts/dmserif.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    
-    @font-face {
-      font-family: 'Ubuntu';
-      src: url('assets/fonts/ubuntu.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    
-    /* Aplicar fuentes personalizadas */
-    body {
-      font-family: 'Ubuntu', sans-serif;
-      background: linear-gradient(180deg, #579065 0%, #2E5D3B 100%);
-      min-height: 100vh;
-    }
-    
-    h1, h2, h3 {
-      font-family: 'DM Serif', serif;
-    }
-    
-    .logo {
-      font-family: 'DM Serif', serif;
-    }
-    
-    .main-menu a, .btn {
-      font-family: 'Ubuntu', sans-serif;
-    }
-    
-    /* Navegación del header */
-    .header-nav {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
-    
-    .header-nav a {
-      color: #111;
-      text-decoration: none;
-      font-weight: 500;
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: background-color 0.2s;
-    }
-    
-    .header-nav a:hover {
-      background-color: #ececec;
-    }
-    
-    /* Ocultar navegación del header en mobile */
-    @media (max-width: 959px) {
-      .header-nav {
-        display: none;
-      }
-    }
-  </style>
+
 </head>
 <body>
   <header class="header">
@@ -89,31 +29,46 @@
       </div>
     </section>
 
+    <section id="presentacion" class="presentacion-seccion">
+      <h2>Presentación</h2>
+      <p>¡Hola! Soy Luca Benidze, un desarrollador apasionado por la tecnología y la innovación. Actualmente estoy cursando DAM (Desarrollo de Aplicaciones Multiplataforma) y tengo experiencia en soporte técnico y desarrollo web.</p>
+    </section>
+
     <section id="proyectos" class="projects">
       <h2>Proyectos</h2>
       <div class="grid">
         <article class="card">
+          <h3>Proyecto 1</h3>
           <figure><img src="assets/img/p1.jpg" alt="Proyecto 1"></figure>
-          <h3>Proyecto 1</h3><p>Landing responsive.</p>
+          <p>Script con automatización para el ayuntamiento de Mislata.</p>
         </article>
         <article class="card">
+          <h3>Proyecto 2</h3>
           <figure><img src="assets/img/p2.jpg" alt="Proyecto 2"></figure>
-          <h3>Proyecto 2</h3><p>Portfolio minimal.</p>
+          <p>Portfolio minimal para entrega como proyecto.</p>
         </article>
         <article class="card">
+          <h3>Proyecto 3</h3>
           <figure><img src="assets/img/p3.jpg" alt="Proyecto 3"></figure>
-          <h3>Proyecto 3</h3><p>Tienda demo.</p>
+          <p>Tienda de demostración de productos para una PYME.</p>
         </article>
       </div>
     </section>
 
     <section id="estudios" class="cv">
       <h2>Estudios / Trabajos</h2>
+
+      <h3>Estudios</h3>
       <ul>
-        <li><strong>Experiencia:</strong> Soporte N1 — Marktel; Técnico — Ayto. Mislata</li>
-        <li><strong>Formación:</strong> DAM (en curso), SMR</li>
-        <li><strong>Contacto:</strong> <a href="mailto:lucabenidze@gmail.com">lucabenidze@gmail.com</a></li>
+        <li><strong>Formación:</strong> FPGS DAM (en curso), FPGM SMR, FPGM Administración de empresas (NO ACABADO)</li>
+        <li><strong>Idiomas (4):</strong> Inglés (C2), Español (Nativo), Valenciano (B1), Georgiano (nivel medio)</li>     
       </ul>
+      <h3>Trabajos</h3>
+      <ul>
+        <li><strong>Experiencia:</strong> Soporte N1 - Grupo MÁSMÓVIL; Técnico informático - Ayto. Mislata (prácticas)</li>
+      </ul>
+
+
     </section>
 
     <section id="contacto" class="contact">
